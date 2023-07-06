@@ -71,7 +71,7 @@ const Work = () => {
                   ease: "easeInOut",
                   staggerChildren: 0.5,
                 }}
-                className="app__work-hover app__flex"
+                className="app__flex app__work-hover"
               >
                 <a href={work.projectLink} target="_blank" rel="noreferrer">
                   <motion.div
@@ -109,6 +109,16 @@ const Work = () => {
               <div className="app__work-tag app__flex">
                 <p className="p-text">{work.tags[0]}</p>
               </div>
+            </div>
+
+            {/* if tiuchable screen, show links at bottom */}
+            <div className="app__work-untouchable">
+              <a href={work.projectLink} target="_blank" rel="noreferrer">
+                <AiFillEye />
+              </a>
+              <a href={work.codeLink} target="_blank" rel="noreferrer">
+                <AiFillGithub />
+              </a>
             </div>
           </div>
         ))}
